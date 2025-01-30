@@ -31,12 +31,6 @@ bmp280 = BMP280(i2c_dev=bus, i2c_addr=0x77)
 # Create the database table if it doesn't exist
 create_table()
 
-print("""temperature-and-pressure.py - Displays the temperature and pressure.
-
-Press Ctrl+C to exit!
-
-""")
-
 while True:
     # Get temperature and pressure
     temperature = bmp280.get_temperature()
